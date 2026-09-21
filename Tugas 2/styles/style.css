@@ -1,0 +1,402 @@
+/* =========================================================
+   Reset dasar
+   ========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #F7F9FC;
+  --surface: #EEF3FA;
+  --surface-strong: #E3ECF8;
+  --text: #16233A;
+  --text-muted: #5A6A82;
+  --accent: #2A5EA8;
+  --accent-dark: #1D4275;
+  --border: #D8E1EE;
+
+  --font-heading: "Fraunces", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+/* =========================================================
+   Wrapper umum
+   ========================================================= */
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =========================================================
+   Header
+   ========================================================= */
+header {
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg);
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 40px 24px 22px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.header-inner h1 {
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+
+.site-tagline {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  max-width: 46ch;
+}
+
+/* =========================================================
+   Navigasi
+   ========================================================= */
+nav {
+  border-bottom: 1px solid var(--border);
+  background-color: var(--surface);
+}
+
+nav .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+nav a {
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--accent);
+}
+
+/* =========================================================
+   Main layout — flexbox, bukan float
+   ========================================================= */
+main {
+  padding: 44px 0 8px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 44px;
+  align-items: flex-start;
+}
+
+/* Aside: foto, identitas singkat, dan kontak */
+aside {
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px;
+}
+
+aside img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.profile-id {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile-name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.profile-role {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.quick-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.88rem;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.quick-facts dt {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.quick-facts dd {
+  font-weight: 500;
+}
+
+.quick-facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.aside-label {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.contact-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-links a {
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+/* Article: isi biodata */
+article {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  min-width: 0;
+}
+
+article section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+article section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 18px 0 10px;
+}
+
+article p {
+  color: var(--text);
+}
+
+.section-note {
+  color: var(--text-muted);
+  margin-top: -2px;
+}
+
+/* Daftar tag bahasa pemrograman */
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-list li {
+  background-color: var(--surface-strong);
+  color: var(--accent-dark);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Daftar proyek */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.project-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.project-desc {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.project-stack {
+  color: var(--accent-dark);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Tombol tautan (Profil Dicoding) */
+.button-link {
+  display: inline-block;
+  margin-top: 14px;
+  background-color: var(--accent);
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 0.92rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.button-link:hover,
+.button-link:focus {
+  background-color: var(--accent-dark);
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 52px;
+  padding: 22px 0 34px;
+  background-color: var(--bg);
+}
+
+footer .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   Media Query — responsivitas, tetap flexbox
+   ========================================================= */
+@media (max-width: 880px) {
+  .content {
+    gap: 32px;
+  }
+
+  aside {
+    flex-basis: 200px;
+  }
+}
+
+@media (max-width: 680px) {
+  .header-inner h1 {
+    font-size: 1.6rem;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  aside {
+    flex: 1 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  aside img {
+    width: 88px;
+    flex: 0 0 88px;
+  }
+
+  .profile-id {
+    flex: 1 1 160px;
+  }
+
+  .quick-facts,
+  .contact-links {
+    flex-basis: 100%;
+    border-top: 1px solid var(--border);
+  }
+}
+
+@media (max-width: 420px) {
+  .header-inner {
+    padding: 32px 20px 18px;
+  }
+
+  aside {
+    flex-direction: column;
+  }
+
+  aside img {
+    width: 100%;
+  }
+}
