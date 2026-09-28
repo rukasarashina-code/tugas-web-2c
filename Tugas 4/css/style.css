@@ -1,0 +1,18 @@
+/* memberikan kode CSS untuk mengatur tampilan halaman web.  */
+/* untuk elemen h1  */
+h1{
+   color: rgb(0, 208, 255);
+   font-size: 24px; 
+}
+
+/* untuk elemen h2  */
+h2{
+    color:rgb(244, 209, 6);
+    font-size: 20px;
+}
+
+/* untuk elemen p  */
+p{
+    color:rgb(4, 42, 4);
+    font-size: 20px;
+}
