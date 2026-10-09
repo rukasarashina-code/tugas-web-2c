@@ -29,7 +29,7 @@ jobs:
       - name: Upload Portfolio
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './Tugas 2'
+          path: './web-portofolio'
 
       - name: Deploy
         id: deployment
